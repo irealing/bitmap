@@ -1,0 +1,9 @@
+.vscode/
+*.so
+*.exe
+CMakeFiles
+*.h.gch
+*.cmake
+CMakeCache.txt
+main
+Makefile
