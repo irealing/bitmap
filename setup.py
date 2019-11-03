@@ -1,10 +1,11 @@
-from setuptools import Extension, setup
+from setuptools import Extension, setup, find_packages
 
 setup(
     name="bitmap",
     version="0.0.1",
     author="Memory_Leak",
     author_email="irealing@163.com",
+    packages=find_packages(),
     ext_modules=[
         Extension(
             "bitmap._bitmap",
