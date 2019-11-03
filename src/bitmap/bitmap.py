@@ -2,6 +2,9 @@
 import array
 
 
+__author__ = "Memory_Leak<irealing@163.com>"
+
+
 class BitmapBlock(object):
     BLOCKSIZE = 1024*1024*8
 
