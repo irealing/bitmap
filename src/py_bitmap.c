@@ -11,7 +11,6 @@ static int Bitmap_init(PyBitmap *self, PyObject *args, PyObject *kw) {
 
 static void Bitmap_dealloc(PyBitmap *self) {
   freeBitmap(self->raw);
-  PyObject_GC_UnTrack(self);
   Py_TYPE(self)->tp_free((PyObject *)self);
 }
 
@@ -54,13 +53,7 @@ static PyObject *Bitmap_add(PyBitmap *self, PyObject *args) {
 static PyObject *Bitmap_has(PyBitmap *self, PyObject *arg) {
   uint64_t val = 0;
   if (!PyArg_ParseTuple(arg, "K", &val)) {
-    return Py_None;
+    return PyLong_FromUnsignedLongLong(0);
   }
   return PyLong_FromUnsignedLongLong(bitmapHas(self->raw, val));
 }
-
-static PyMethodDef Bitmap_methods[] = {
-    {"add", (PyCFunction)Bitmap_add, METH_VARARGS},
-    {"has", (PyCFunction)Bitmap_has, METH_VARARGS},
-    {NULL},
-};

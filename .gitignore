@@ -205,4 +205,7 @@ env.bak/
 venv.bak/
 pip-selfcheck.json
 
+### Local
+*_debug.py
+
 # End of https://www.gitignore.io/api/c,cmake,python
