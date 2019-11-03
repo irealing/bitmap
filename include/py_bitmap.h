@@ -14,6 +14,8 @@ static PyModuleDef bitmapmodule = {
     .m_size = -1,
 };
 
+PyMODINIT_FUNC PyInit__bitmap(void);
+
 static int Bitmap_init(PyBitmap *, PyObject *, PyObject *);
 
 static void Bitmap_dealloc(PyBitmap *);
