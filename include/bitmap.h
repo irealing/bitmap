@@ -1,6 +1,5 @@
 #ifndef _BITMAP_H
 #define _BITMAP_H
-#include <Python.h>
 #include <stdint.h>
 
 #define BITMAP_ELEM_NUM 0x40000
